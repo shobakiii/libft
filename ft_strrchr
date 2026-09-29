@@ -1,0 +1,33 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/24 15:52:20 by mghanmiy          #+#    #+#             */
+/*   Updated: 2026/09/24 18:19:59 by mghanmiy         ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
+
+char *strrchr(const char *str, int ch) 
+{
+    char *lastmatch = NULL;
+
+    while (*str != '\0')
+    {
+        if (*str == (char)ch) 
+        {
+            lastmatch = (char *)str; 
+        }
+        str++;
+    }
+
+    if (ch == '\0') 
+    {
+        return (char *)str;
+    }
+
+    return lastmatch;
+}
