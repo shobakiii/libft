@@ -10,8 +10,8 @@
 /*                                                                            */
 /******************************************************************************/
 
-
-void *memset(void *str, int c, size_t n);
+#include "libft.h"
+void *memset(void *str, int c, size_t n)
 {
  unsigned char *p;
     p =str;

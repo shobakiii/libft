@@ -1,33 +1,27 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy                                         :+:      :+:    :+:   */
+/*   ft_strchr                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+a#+   +#+           */
-/*   Created: 2026/09/28 18:44:02 by mghanmiy          #+#    #+#             */
-/*   Updated: 2026/09/28 18:44:02 by mghanmiy         ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/28 19:53:06 by mghanmiy          #+#    #+#             */
+/*   Updated: 2026/09/29 19:25:16 by mghanmiy         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
-#include "libft.h"
 
-size_t strlcpy(char *dest,char *src,size_t size)
+#include "libft.h"
+char	*ft_strchr(const char *s, int c)
 {
-sigset_t i;
-i=0;
-if (size>0)
-{
-    while (i<size-1 && size[i]!='\0')
+    int i;
+    i=0;
+    while (s[i]!='\0')
     {
-        dest[i]=src[i];
-        i++;
+        if (s[i]==(char)c)
+            return((char *)&s[i]);
+            i++;
     }
-    dest[i]='\0';
-}
-i=0;
-while (src !='\0')
-{
-    i++;
-}
-return(i);
+    if (c=='\0')
+    return((char *)&s[i]);
+   return (NULL); 
 }

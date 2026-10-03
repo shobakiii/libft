@@ -1,33 +1,16 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr                                         :+:      :+:    :+:   */
+/*   ft_isdigit                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/24 15:52:20 by mghanmiy          #+#    #+#             */
-/*   Updated: 2026/09/29 19:25:25 by mghanmiy         ###   ########.fr       */
+/*   Created: 2026/09/24 16:17:04 by mghanmiy          #+#    #+#             */
+/*   Updated: 2026/09/29 19:26:16 by mghanmiy         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-
-char *strrchr(const char *str, int ch) 
+int ft_isdigit(int c)
 {
-    char *lastmatch = NULL;
-
-    while (*str != '\0')
-    {
-        if (*str == (char)ch) 
-        {
-            lastmatch = (char *)str; 
-        }
-        str++;
-    }
-
-    if (ch == '\0') 
-    {
-        return (char *)str;
-    }
-
-    return lastmatch;
+    return (c >= 48 && c <= 57);
 }

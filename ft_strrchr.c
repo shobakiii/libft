@@ -1,34 +1,33 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove                                         :+:      :+:    :+:   */
+/*   ft_strrchr                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/28 17:36:45 by mghanmiy          #+#    #+#             */
-/*   Updated: 2026/09/29 19:26:11 by mghanmiy         ###   ########.fr       */
+/*   Created: 2026/09/24 15:52:20 by mghanmiy          #+#    #+#             */
+/*   Updated: 2026/09/29 19:25:25 by mghanmiy         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-
-void *memmove(void *dest, const void *src, size_t n)
+# include "libft.h"
+char *strrchr(const char *str, int ch) 
 {
-unsigned char *d;
-const unsigned char *s;
-size_t i;
-d =(unsigned char *)dest;
-s=(const unsigned char *)src;
-i=0;
-if (d==s)
-    return(dest);
-    if (d<s)
-        void memcpy(void *dest, const void *src , size_t n)
-    if (d>s)
+    char *lastmatch = NULL;
+
+    while (*str != '\0')
     {
-        while (i<n)
+        if (*str == (char)ch) 
         {
-         d[n-1-i]=s[n-1-i];   
+            lastmatch = (char *)str; 
         }
+        str++;
     }
-    return (dest);
+
+    if (ch == '\0') 
+    {
+        return (char *)str;
+    }
+
+    return lastmatch;
 }
