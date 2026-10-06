@@ -1,34 +1,35 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+a#+   +#+           */
-/*   Created: 2026/09/28 18:44:02 by mghanmiy          #+#    #+#             */
-/*   Updated: 2026/09/28 18:44:02 by mghanmiy         ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/06 15:09:35 by mghanmiy          #+#    #+#             */
+/*   Updated: 2026/10/06 16:24:06 by mghanmiy         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
+
 #include "libft.h"
 
-size_t strlcpy(char *dest,char *src,size_t size)
+size_t	strlcpy(char *dest, char *src, size_t size)
 {
-size_t i;
-i=0;
+	size_t i;
+	i = 0;
 
-if (size>0)
-{
-    while (i<size-1 && src[i]!='\0')
-    {
-        dest[i]=src[i];
-        i++;
-    }
-    dest[i]='\0';
-}
-i=0;
-while (src !='\0')
-{
-    i++;
-}
-return(i);
+	if (size > 0)
+	{
+		while (i < size - 1 && src[i])
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	i = 0;
+	while (src)
+	{
+		i++;
+	}
+	return (i);
 }

@@ -1,9 +1,21 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/06 14:57:14 by mghanmiy          #+#    #+#             */
+/*   Updated: 2026/10/06 15:08:19 by mghanmiy         ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	unsigned int	i;
+	char *str;
+	unsigned int i;
 
 	if (!s || !f)
 		return (NULL);

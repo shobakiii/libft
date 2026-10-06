@@ -1,34 +1,35 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 17:36:45 by mghanmiy          #+#    #+#             */
-/*   Updated: 2026/09/29 19:26:11 by mghanmiy         ###   ########.fr       */
+/*   Updated: 2026/10/06 15:26:34 by mghanmiy         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
-void *memmove(void *dest, const void *src, size_t n)
+
+void	*memmove(void *dest, const void *src, size_t n)
 {
-unsigned char *d;
-const unsigned char *s;
-size_t i;
-d =(unsigned char *)dest;
-s=(const unsigned char *)src;
-i=0;
-if (d==s)
-    return(dest);
-    if (d<s)
-        return (memcpy(dest, src, n));
-    if (d>s)
-    {
-        while (i<n)
-        {
-         d[n-1-i]=s[n-1-i];   
-        }
-    }
-    return (dest);
+	unsigned char *d;
+	const unsigned char *s;
+	size_t i;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	i = 0;
+	if (d == s)
+		return (dest);
+	if (d < s)
+		return (ft_memcpy(dest, src, n));
+	if (d > s)
+	{
+		while (i < n)
+		{
+			d[n - 1 - i] = s[n - 1 - i];
+		}
+	}
+	return (dest);
 }

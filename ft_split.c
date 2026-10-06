@@ -1,3 +1,15 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mghanmiy <mghanmiy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/06 14:56:44 by mghanmiy          #+#    #+#             */
+/*   Updated: 2026/10/06 15:05:54 by mghanmiy         ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
 #include "libft.h"
 
 static size_t	ft_count_words(char const *s, char c)
@@ -55,10 +67,10 @@ static void	free_words(char **words, size_t count)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**words;
-	size_t	count;
-	size_t	i;
-	size_t	pos;
+	char **words;
+	size_t count;
+	size_t i;
+	size_t pos;
 
 	if (!s)
 		return (NULL);
