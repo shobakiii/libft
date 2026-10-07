@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by shobakiii.*
+*This project has been created as part of the 42 curriculum by mghanmiy.*
 
 # libft
 
@@ -95,13 +95,6 @@ make clean   # remove object files
 make fclean  # remove object files and libft.a
 make re      # clean and rebuild
 ```
-
-**Current build status:** `make` does not currently complete successfully.
-In the checked-out sources, compilation stops at `ft_bzero.c` because its
-definition's return type conflicts with the declaration in `libft.h`. The
-Makefile also lists `ft_memccpy.c` and `ft_strncmp.c`, which are not present
-in the repository, and there are other source/header inconsistencies to
-resolve before the archive can be built and used reliably.
 
 ### Link the library
 
